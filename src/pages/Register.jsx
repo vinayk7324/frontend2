@@ -57,7 +57,7 @@ const Register = () => {
     } catch (error) {
       console.log("client side error in register:: ", error);
       setLoader(false);
-      toast.error('network error please connect network',toastOptions);
+      toast.error('network error please wait',toastOptions);
       return;
     }
   }
