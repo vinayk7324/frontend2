@@ -95,7 +95,7 @@ const OpenChat = () => {
     useEffect(()=>{
         
         if(current){
-            socket.current = io(api_uri,{
+            socket.current = io(`${api_uri}`,{
                 withCredentials:true
             });
             socket.current.emit("add-user",current._id);
