@@ -107,8 +107,8 @@ useEffect(()=>{
             <img src={`data:image/svg+xml;base64,${user.avatarImage}`} alt="" />
           </div>
           <div className="  lg:space-y-2 flex flex-col items-start">
-            <span className=' lg:text-[23px] text-[18px] first-letter:uppercase '> {user.name} </span>
-            <span className=' text-[14px] lg:text-[18px]' >IITian</span>
+            <span className=' lg:text-[20px] text-[18px] first-letter:uppercase '> {user.name} </span>
+            <span className=' text-[14px] lg:text-[16px]' >IITian</span>
           </div>
         </div>
 
@@ -119,10 +119,10 @@ useEffect(()=>{
             <div key={id()} className=" flex    items-center py-2 lg:px-6 px-4 space-x-3 space-y-4 border-b-2 border-[#202020]  hover:bg-[#48474751] ">
 
           <div className="  text-white lg:w-12 lg:h-12 flex items-center justify-center rounded-full">
-            <span className='material-symbols-outlined  lg:text-2xl'>{element.icon} </span>
+            <span className='material-symbols-outlined  '>{element.icon} </span>
           </div>
           <div className=" text-white  flex flex-col" >
-            <span className=' text-[18px] lg:text-[24px]'> { element.title} </span>
+            <span className=' text-[18px] lg:text-[20px]'> { element.title} </span>
             <span className=' text-[14px] lg:text-[19px]'> {element.description} </span>
           </div>
 

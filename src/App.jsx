@@ -21,10 +21,10 @@ const App = () => {
     
   })
   return (
-    <>
-      <div className=' lg:px-4 lg:py-2 pb-0 bg-[#07110b]     overflow-hidden h-screen   items-center justify-center  flex '>
-        <div className="  lg:h-[96.5vh] h-full  relative   lg:flex-row flex-col flex w-full">
-          <div className={`lg:h-full   absolute z-[2] bottom-0 lg:static      w-full lg:w-[5%] ${chatOpen?"lg:block hidden":""} `}>
+    <> 
+      <div className=' lg:px-4  pb-0 bg-[#07110b]      overflow-hidden  h-screen     items-center justify-center  flex '>
+        <div className="  lg:h-[96.5vh] h-full  relative    lg:flex-row flex-col flex w-full">
+          <div className={`lg:h-full    absolute z-[2]  lg:static  bottom-0      w-full lg:w-[5%] ${chatOpen?"lg:block hidden":""} `}>
           <SideBar />
           </div>
 
@@ -32,7 +32,7 @@ const App = () => {
           <div className="  lg:w-1/3  lg:h-[93.5%]   lg:h-full     ">
             <Outlet />
           </div>
-          <div className={` lg:rounded-r-lg      h-full bg-[#1a1b1a]  lg:w-[67%]    ${chatOpen?"lg:block":"hidden lg:block "} `}>
+          <div className={` lg:rounded-r-lg  border-red-600 borde     h-full bg-[#1a1b1a]  lg:w-[67%]    ${chatOpen?"lg:block":"hidden lg:block "} `}>
             
             <OpenChat/>
           </div>

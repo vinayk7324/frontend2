@@ -176,55 +176,60 @@ const OpenChat = () => {
                     if (contact._id === chatId) {
                       
                         return (
-                            <div key={contact._id} className='text-white registerBack  flex flex-col justify-between lg:h-full '>
-                                <div className="top flex justify-between  items-center px-2  py-3 lg:rounded-tr-md bg-[#4c4c53]">
+                            <div key={contact._id} className='text-white registerBack    flex flex-col justify-between lg:h-full '>
+                                <div className="top  flex justify-between h-[10vh]  items-center px-2  py-3 lg:rounded-tr-md bg-[#4c4c53]">
 
                                     
                                     <div className=" flex space-x-2 lg:space-x-4 items-center ">
-                                        <span onClick={()=>{setChatOpen(!chatOpen)}} className=' block lg:hidden'>
+                                        <span onClick={()=>{
+                                           
+                                            
+                                            setChatOpen(!chatOpen);
+
+                                        }} className=' block lg:hidden'>
                                             <span className='material-symbols-outlined  text-[18px]'>
                                                 arrow_back
 
                                             </span>
                                         </span>
-                                        <div className=" lg:h-12 lg:w-12 h-9 w-9 border-[3px] flex items-center justify-center rounded-full ">
+                                        <div className=" lg:h-10 lg:w-10 h-9 w-9 border-[3px] flex items-center justify-center rounded-full ">
                                             <img className='h-full w-full ' src={`data:image/svg+xml;base64,${contact.avatarImage}`} alt="avatar" />
 
                                         </div>
-                                        <span className=' flex flex-col lg:text-[20px] text-[14px]'>
+                                        <span className=' flex flex-col lg:text-[16px] text-[14px]'>
                                             <span className=' first-letter:uppercase'>{contact.name}</span>
                                             <span >online</span>
                                         </span>
                                     </div>
                                     <div className=" flex lg:space-x-4 space-x-2 ">
                                         <div className="">
-                                            <span className="material-symbols-outlined text-[19px] lg:text-2xl">
+                                            <span className="material-symbols-outlined text-[19px] lg:text-[20px]">
                                                 videocam
                                             </span>
 
 
                                         </div>
                                         <div className="">
-                                            <span className="material-symbols-outlined text-[19px] lg:text-2xl">
+                                            <span className="material-symbols-outlined text-[19px] lg:text-[20px]">
                                                 call
                                             </span>
                                         </div>
 
                                         <div className="">
-                                            <span className="material-symbols-outlined text-[19px] lg:text-2xl">
+                                            <span className="material-symbols-outlined text-[19px] lg:text-[20px]">
                                                 search
                                             </span>
 
                                         </div>
                                         <div className="">
-                                            <span className="material-symbols-outlined text-[19px] lg:text-2xl">
+                                            <span className="material-symbols-outlined text-[19px] lg:text-[20px]">
                                                 more_vert
                                             </span>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div id='middle'  className="middle backdrop-blur-sm   relative space-y-2 flex-col  h-[80vh]   flex  p-3 lg:h-full overflow-y-scroll">
+                                <div id='middle'  className="middle backdrop-blur-sm   relative space-y-2 flex-col  max-h-[80vh]   flex  p-3 overflow-y-scroll">
                                     {
 
                                         messages.map((msg) => (
@@ -233,7 +238,7 @@ const OpenChat = () => {
                                             <div className=" ">
                                                 <span key={uuidv4()} ref={scrollRef}  className={`${msg.fromSelf ? " relative    flex lg:px-4 px-3 lg:py-2 py-1 text-wrap float-right  w-fit bg-blue-600 lg:rounded-xl rounded-md rounded-tr-none shadow-xl   " : " flex w-fit lg:px-4 lg:py-2 py-1 px-3 text-wrap  bg-black rounded-tl-none float-start lg:rounded-xl rounded-lg "}`}>
                                                 <div className='text-wrap '>
-                                                    <p className=' w-full text-wrap text-[17px] lg:text-[23px] '> {msg.message} </p>
+                                                    <p className=' w-full text-wrap text-[17px] lg:text-[18px] '> {msg.message} </p>
                                                     
                                                 </div>
 
@@ -244,10 +249,10 @@ const OpenChat = () => {
                                 </div>
 
 
-                                <div className="buttom py-1 lg:rounded-br-md lg:h-20 flex w-full px-1 space-x-2 lg:space-x-3 lg:px-3 items-center bg-[#4c4c53]">
+                                <div className="buttom py-1 lg:rounded-br-md lg:h-16 flex w-full px-1 space-x-2 lg:space-x-3 lg:px-3 items-center bg-[#4c4c53]">
                                     <div className=" relative   ">
                                         <button onClick={() => setEmojiPicker(!emojiPicker)} className=" hover:bg-[#3f3e3e] lg:h-10 lg:w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-3xl">
+                                            <span className="material-symbols-outlined lg:text-2xl">
                                                 mood
                                             </span>
                                         </button>
@@ -259,25 +264,25 @@ const OpenChat = () => {
 
                                     </div>
                                     <button className=' lg:block hidden hover:bg-[#3f3e3e] lg:h-10 lg:w-10 rounded-full flex items-center justify-center'>
-                                        <span className="material-symbols-outlined lg:text-3xl">
+                                        <span className="material-symbols-outlined lg:text-2xl">
                                             add
                                         </span>
                                     </button>
-                                    <div className=" flex items-center  h-[40px] lg:h-12 ">
+                                    <div className=" flex items-center  h-[40px] lg:h-10 ">
                                         <input type="text" value={inputMsg} onChange={(e) => {
                                          
                                             
-                                            setInputMsg(e.target.value)}} onKeyDown={handleSendThroghKey} placeholder='Type a message ' className=' lg:text-[23px]  h-full text-[15px] rounded-sm lg:w-[50vw] w-[75vw] border-[0px] placeholder:text-[14px]  bg-[#242429] placeholder:text-[#d8d6d6] lg:placeholder:text-[23px]'/>
+                                            setInputMsg(e.target.value)}} onKeyDown={handleSendThroghKey} placeholder='Type a message ' className=' lg:text-[23px]  h-full text-[15px] rounded-sm lg:w-[50vw] w-[75vw] border-[0px] placeholder:text-[14px]  bg-[#242429] placeholder:text-[#d8d6d6] lg:placeholder:text-[18px]'/>
 
                                     </div>
                                   
                                     {
                                         inputMsg == '' ? <button className=" hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-3xl">
+                                            <span className="material-symbols-outlined lg:text-2xl">
                                                 mic
                                             </span>
                                         </button> : <button id='send-msg' onClick={handleSendMessage}  className=" hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-3xl">
+                                            <span className="material-symbols-outlined lg:text-2xl">
                                                 send
                                             </span>
                                         </button>

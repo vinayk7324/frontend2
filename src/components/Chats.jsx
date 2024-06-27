@@ -67,7 +67,7 @@ const Chats = () => {
 
 
   return (
-    <div className={` lg:block  ${chatOpen ? "hidden" : ""}  lg:h-full  relative flex flex-col relative text-white    h-[99.5vh]`}>
+    <div className={` lg:block  ${chatOpen ? "hidden" : ""}     relative flex flex-col relative text-white    `}>
       <div className="top space-y-3 w-full p-3">
         <div className=" flex items-center py-4  justify-between">
           <span className='lg:text-3xl font-bold text-center lg:block hidden'>Chats</span>
@@ -93,7 +93,7 @@ const Chats = () => {
       </div>
 
 
-      <div id="contactList" className="   overflow-y-scroll  h-[82vh]">
+      <div id="contactList" className="   overflow-y-scroll   lg:h-fit  ">
         {
 
           contacts.length === 0 ? <div>Not found</div> : <div>
@@ -107,7 +107,7 @@ const Chats = () => {
                     setChatOpen(true);
                   }}
                   className="connection px-2  cursor-pointer space-x-2 lg:pl-2 border-[#3b3b3b] border-b-2  hover:bg-[#48474751] lg:space-x-3    lg:h-20 flex lg:justify-between items-center " id='connection1'>
-                  <div className=" lg:h-14  lg:w-14 h-10 w-10  border-[4px] rounded-full flex  items-center justify-center">
+                  <div className=" lg:h-12  lg:w-12 h-10 w-10  border-[4px] rounded-full flex  items-center justify-center">
                     <img className='h-full w-full ' src={`data:image/svg+xml;base64,${contact.avatarImage}`} alt="avatar" />
 
                   </div>
@@ -115,7 +115,7 @@ const Chats = () => {
 
                   <div className=" flex   justify-between h-full items-center    w-5/6">
                     <div className=" flex flex-col lg:justify-between   space-y-1">
-                      <div className="name lg:text-[23px] text-[18px] first-letter:uppercase">{contact.name}</div>
+                      <div className="name lg:text-[19px] text-[18px] first-letter:uppercase">{contact.name}</div>
                       <div className="lastMessage lg:text-[18px] text-[12px]">
                         {
                           contact.lastMsg.map((lastMessage) => {
