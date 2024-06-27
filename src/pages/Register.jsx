@@ -154,14 +154,14 @@ const Register = () => {
 
   return (
     <>
-      <div className=' h-screen registerBack  w-full flex  lg:items-center lg:justify-center'>
+      <div className=' h-screen registerBack   w-full flex  lg:items-center lg:justify-center'>
         <div className='  flex border-red-600     '>
           <div className=' lg:rounded-xl  shadow-md h-full  w-[100vw] lg:w-fit backdrop-blur-sm lg:overflow-y-hidden overflow-y-scroll text-white  flex items-center flex-col lg:border p-3'>
             <div className=" flex flex-col items-center space-y-2 ">
               <span className=' '> <img src={Logo} className='  lg:h-24 h-16' alt="" /> </span>
               <span className=' lg:text-3xl text-[24px] font-bold p-1 bg-white  border-b-[8px] border-l-[8px] border-gray-700 text-black px-3 rounded-xl rounded-tr-none rounded-bl-none '>QuickChat</span>
             </div>
-            <form className="flex max-w-md lg:w-[40vw]  lg:gap-3 gap-2  flex-col justify-center ">
+            <form className="flex w-full lg:w-[30vw]   gap-3  flex-col justify-center ">
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="email2" color={'white'} value="Name" />
@@ -222,7 +222,7 @@ const Register = () => {
               <Button onClick={!isOtpsend?sendOTP:verifyOtp} type="submit" disabled={loader} >{loader?<div><Spinner/></div>:!isOtpsend?'send OTP':'verify'} </Button>
               <div className=' pb-2 w-full flex flex-col items-center justify-center relative'>
                 {/* <span className=' after:border-b-2 after:border-black after:absolute after:max-w-xl after:min-w-20 after:top-3 '>or</span> */}
-                <span className=' text-[14px] lg:text-[23px] uppercase'>
+                <span className=' text-[14px] lg:text-[16px] uppercase'>
                   Already have an account ? <Link to={"/login"} className='  text-blue-600 underline underline-offset-4 font-bold '>login</Link>
                 </span>
               </div>

@@ -140,11 +140,11 @@ const Login = () => {
         <Label color={'white'} htmlFor="remember">Remember me</Label>
       </div>
       <Button onClick={handleLogin} type="submit" disabled={loader} className=' uppercase'>{loader?<div><Spinner/></div>:'login'} </Button>
-      <div className=' text-[15px] lg:text-[20px]  flex items-center justify-center'>
-        <Link to={'/forgot-password'} className=' relative before:absolute   before:border-b-[1px] before:top-[12px] lg:before:right-32 lg:before:top-[14px] before:right-24   before:w-full after:absolute after:left-24   after:border-b-[1px] after:top-[12px] lg:after:top-[14px] lg:after:left-32   after:w-full text-blue-600 underline underline-offset-4' > forgot password</Link>
+      <div className=' text-[15px] lg:text-[16px]  flex items-center justify-center'>
+        <Link to={'/forgot-password'} className=' relative before:absolute   before:border-b-[1px] before:top-[12px] lg:before:right-32 lg:before:top-[14px] before:right-28   before:w-full after:absolute after:left-28   after:border-b-[1px] after:top-[12px] lg:after:top-[14px] lg:after:left-32   after:w-full text-blue-600 underline underline-offset-4' > forgot password</Link>
       </div> 
       <div className=' flex  items-center justify-center'>
-        <span className=' lg:text-[22px] text-[14px] uppercase  '>Don't have any account? <Link to={'/register'} className=' text-blue-600 underline underline-offset-6'>register</Link> </span>
+        <span className=' lg:text-[16px] text-[14px] uppercase  '>Don't have any account? <Link to={'/register'} className=' text-blue-600 underline underline-offset-6'>register</Link> </span>
       </div>
     </form>
       </div>

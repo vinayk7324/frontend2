@@ -12,12 +12,30 @@ import Home from './pages/Home.jsx'
 import { AuthProvider } from './context/contextApi.jsx'
 import SetAvatar from './pages/SetAvatar.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
+import MainHome from './pages/Home/MainHome.jsx'
+import About from './pages/Home/About.jsx'
+import ContactUs from './pages/Home/ContactUs.jsx'
 
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element:<Home/>
+    element:<Home/>,
+    children:[
+      {
+        path:"/",
+        element:<MainHome/>
+      },
+      {
+        path:"/about",
+        element:<About/>
+      },
+      {
+        path:"/contactus",
+        element:<ContactUs/>
+      }
+
+    ]
   },
   {
     path:'/register',
