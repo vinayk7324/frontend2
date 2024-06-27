@@ -13,7 +13,7 @@ import MainHome from './Home/MainHome'
 const Home = () => {
   const navigate = useNavigate();
   const id = useId();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
 
   const handleClose = () => setIsOpen(false);
