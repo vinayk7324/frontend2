@@ -2,20 +2,14 @@ import { Drawer, Sidebar, TextInput } from 'flowbite-react'
 import React, { useEffect,useState } from 'react'
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
 import img from '../assets/meetme.png'
-import {  HiLogin,
-  HiSearch,
-  
-  HiMenu,
-   } from 'react-icons/hi'
+import {HiSearch,HiMenu,} from 'react-icons/hi'
 import { useId } from 'react'
-import MainHome from './Home/MainHome'
+
 
 const Home = () => {
   const navigate = useNavigate();
   const id = useId();
   const [isOpen, setIsOpen] = useState(false);
-
-
   const handleClose = () => setIsOpen(false);
   const HomeArr = [
     {
@@ -44,14 +38,7 @@ const Home = () => {
       slug: "/register"
     },
   ]
-  const contactArr = [
-    {
-      slug:"",
-      
-      Icon:""
-
-  }
-]
+  
   useEffect(() => {
     const user = JSON.parse(sessionStorage.getItem('userData'));
     if (user && user.token) {
