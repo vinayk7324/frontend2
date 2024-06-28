@@ -29,7 +29,7 @@ const [loader,setLoader]  = useState(false);
  
 
   return (
-    <div className='text-white  relative'>
+    <div className='text-white border  relative'>
       <div className=" top flex space-x-2   items-center  h-14">
 
         <div className=" lg:text-[1.6rem] text-2xl font-bold px-3 lg:px-10">Profile</div>
@@ -38,7 +38,7 @@ const [loader,setLoader]  = useState(false);
 
     <div className=" lg:space-y-6 lg:p-8 px-3">
     <div className=" flex items-center  p-2 lg:p-0 justify-center">
-        <div className="profileImg border lg:h-40 lg:w-40 h-24  rounded-full lg:border-[6px] border-[4px] p-[4px] flex items-center justify-center">
+        <div className="profileImg border lg:h-28 lg:w-28 h-24  rounded-full lg:border-[6px] border-[4px] p-[4px] flex items-center justify-center">
         <img className='h-full w-full ' src={`data:image/svg+xml;base64,${avatarImage}`} alt="avatar"/>
 
         </div>

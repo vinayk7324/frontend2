@@ -154,19 +154,19 @@ const Register = () => {
 
   return (
     <>
-      <div className=' h-screen registerBack   w-full flex  lg:items-center lg:justify-center'>
+      <div className=' h-screen  registerBack   w-full flex  lg:items-center lg:justify-center'>
         <div className='  flex border-red-600     '>
-          <div className=' lg:rounded-xl  shadow-md h-full  w-[100vw] lg:w-fit backdrop-blur-sm lg:overflow-y-hidden overflow-y-scroll text-white  flex items-center flex-col lg:border p-3'>
+          <div className=' lg:rounded-xl  shadow-md h-full  w-[100vw] lg:w-[25vw] backdrop-blur-sm lg:overflow-y-hidden overflow-y-scroll text-white  flex items-center flex-col lg:border p-3'>
             <div className=" flex flex-col items-center space-y-2 ">
-              <span className=' '> <img src={Logo} className='  lg:h-24 h-16' alt="" /> </span>
-              <span className=' lg:text-3xl text-[24px] font-bold p-1 bg-white  border-b-[8px] border-l-[8px] border-gray-700 text-black px-3 rounded-xl rounded-tr-none rounded-bl-none '>QuickChat</span>
+              {/* <span className=' '> <img src={Logo} className='  lg:h-20 h-12' alt="" /> </span> */}
+              <span className=' lg:text-2xl text-[18px] font-bold p-1 bg-white  border-b-[8px] border-l-[8px] border-gray-700 text-black px-3 rounded-xl rounded-tr-none rounded-bl-none '>Register</span>
             </div>
-            <form className="flex w-full lg:w-[30vw]   gap-3  flex-col justify-center ">
+            <form className="flex w-full  h-full  lg:gap-3  gap-3 flex-col justify-center ">
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="email2" color={'white'} value="Name" />
                 </div>
-                <TextInput   onChange={handleChange} value={values.name} name='name' id="email2" type="text" placeholder="Type Name.." required shadow />
+                <TextInput    onChange={handleChange} value={values.name} name='name' id="email2" type="text" placeholder="Type Name.." required shadow />
               </div>
               <div>
                 <div className="mb-2 block">

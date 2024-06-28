@@ -108,6 +108,7 @@ const OpenChat = () => {
         try {
      
             setCurrentMsg(inputMsg);
+            setEmojiPicker(false);
             const res = await axios.post(`${api_uri}/api/v2/message/send-message`, {
                 from: current._id,
                 to: chatId,
@@ -177,7 +178,7 @@ const OpenChat = () => {
                       
                         return (
                             <div key={contact._id} className='text-white registerBack    flex flex-col justify-between lg:h-full '>
-                                <div className="top  flex justify-between h-[10vh]  items-center px-2  py-3 lg:rounded-tr-md bg-[#4c4c53]">
+                                <div className="top  flex justify-between lg:h-[7vh]  items-center px-2  py-3 lg:rounded-tr-md bg-[#4c4c53]">
 
                                     
                                     <div className=" flex space-x-2 lg:space-x-4 items-center ">
@@ -229,7 +230,7 @@ const OpenChat = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div id='middle'  className="middle backdrop-blur-sm   relative space-y-2 flex-col  max-h-[80vh]   flex  p-3 overflow-y-scroll">
+                                <div id='middle'  className="middle backdrop-blur-sm   relative space-y-2 flex-col  h-[78vh]   flex  p-3 overflow-y-scroll">
                                     {
 
                                         messages.map((msg) => (
@@ -238,7 +239,7 @@ const OpenChat = () => {
                                             <div className=" ">
                                                 <span key={uuidv4()} ref={scrollRef}  className={`${msg.fromSelf ? " relative    flex lg:px-4 px-3 lg:py-2 py-1 text-wrap float-right  w-fit bg-blue-600 lg:rounded-xl rounded-md rounded-tr-none shadow-xl   " : " flex w-fit lg:px-4 lg:py-2 py-1 px-3 text-wrap  bg-black rounded-tl-none float-start lg:rounded-xl rounded-lg "}`}>
                                                 <div className='text-wrap '>
-                                                    <p className=' w-full text-wrap text-[17px] lg:text-[18px] '> {msg.message} </p>
+                                                    <p className=' w-full text-wrap text-[12px] lg:text-[16px] '> {msg.message} </p>
                                                     
                                                 </div>
 
@@ -249,10 +250,10 @@ const OpenChat = () => {
                                 </div>
 
 
-                                <div className="buttom py-1 lg:rounded-br-md lg:h-16 flex w-full px-1 space-x-2 lg:space-x-3 lg:px-3 items-center bg-[#4c4c53]">
+                                <div className="bottom py-1 lg:rounded-br-md lg:h-12 flex w-full px-1 space-x-2 lg:space-x-3 lg:px-3 items-center bg-[#4c4c53]">
                                     <div className=" relative   ">
                                         <button onClick={() => setEmojiPicker(!emojiPicker)} className=" hover:bg-[#3f3e3e] lg:h-10 lg:w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-2xl">
+                                            <span className="material-symbols-outlined lg:text-[22px] text-[20px]">
                                                 mood
                                             </span>
                                         </button>
@@ -264,25 +265,25 @@ const OpenChat = () => {
 
                                     </div>
                                     <button className=' lg:block hidden hover:bg-[#3f3e3e] lg:h-10 lg:w-10 rounded-full flex items-center justify-center'>
-                                        <span className="material-symbols-outlined lg:text-2xl">
+                                        <span className="material-symbols-outlined lg:text-[22px]  ">
                                             add
                                         </span>
                                     </button>
-                                    <div className=" flex items-center  h-[40px] lg:h-10 ">
+                                    <div className=" flex items-center  h-[35px] lg:h-9 ">
                                         <input type="text" value={inputMsg} onChange={(e) => {
                                          
                                             
-                                            setInputMsg(e.target.value)}} onKeyDown={handleSendThroghKey} placeholder='Type a message ' className=' lg:text-[23px]  h-full text-[15px] rounded-sm lg:w-[50vw] w-[75vw] border-[0px] placeholder:text-[14px]  bg-[#242429] placeholder:text-[#d8d6d6] lg:placeholder:text-[18px]'/>
+                                            setInputMsg(e.target.value)}} onKeyDown={handleSendThroghKey} placeholder='Type a message ' className=' lg:text-[16px]  h-full text-[13px] rounded-sm lg:w-[50vw] w-[75vw] border-[0px] placeholder:text-[14px]  bg-[#242429] placeholder:text-[#d8d6d6] lg:placeholder:text-[18px]'/>
 
                                     </div>
                                   
                                     {
-                                        inputMsg == '' ? <button className=" hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-2xl">
+                                        inputMsg == '' ? <button className=" lg:hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
+                                            <span className="material-symbols-outlined lg:text-[22px] ">
                                                 mic
                                             </span>
-                                        </button> : <button id='send-msg' onClick={handleSendMessage}  className=" hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
-                                            <span className="material-symbols-outlined lg:text-2xl">
+                                        </button> : <button id='send-msg' onClick={handleSendMessage}  className=" lg:hover:bg-[#3f3e3e]  h-10 w-10 rounded-full flex items-center justify-center">
+                                            <span className="material-symbols-outlined lg:text-[22px] ">
                                                 send
                                             </span>
                                         </button>

@@ -63,12 +63,12 @@ const Home = () => {
          <div className=" flex space-x-2 ">
          {
             HomeArr.map((element) => (
-              <span key={id} className=' w-32   ' >
+              <span key={id} className=' w-24   ' >
                 <NavLink to={element.slug} className={({isActive})=> ` ${isActive?" bg-[#c7c7cb] text-black ":"text-[#c7c7cb] hover:bg-[#c7c7cb]  hover:text-black"} flex items-center  space-x-2  py-2 w-full justify-center transition-all duration-300`} >
-                  <span class="material-symbols-outlined lg:text-[26px]">
+                  <span class="material-symbols-outlined lg:text-[23px]">
                     {element.Icon}
                   </span>
-                  <span className=''> {element.title} </span>
+                  <span className=' lg:text-[16px]'> {element.title} </span>
 
                 </NavLink>
               </span>

@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useState } from 'react'
 import { Button, Dropdown, Spinner, TextInput } from 'flowbite-react'
-import { HiFire, HiPlus, HiSearch, HiViewGrid } from 'react-icons/hi';
+import { HiChat, HiFire, HiMenuAlt2, HiPlus, HiSearch, HiViewGrid } from 'react-icons/hi';
 import axios from 'axios';
 import { useAuth } from '../context/contextApi';
 import { v5 as uuid5} from 'uuid'
@@ -69,9 +69,20 @@ const Chats = () => {
   return (
     <div className={` lg:block  ${chatOpen ? "hidden" : ""}     relative flex flex-col relative text-white    `}>
       <div className="top space-y-3 w-full p-3">
-        <div className=" flex items-center py-4  justify-between">
+        <div className=" flex items-center py-  justify-between">
           <span className='lg:text-3xl font-bold text-center lg:block hidden'>Chats</span>
-          <span className=' lg:hidden block text-[28px] font-serif'>QuickChat</span>
+          <span className=' lg:hidden block text-[24px]'>QuickChat</span>
+          <div className=" flex space-x-4 text-[23px]">
+            <span className=' material-symbols-outlined'>
+              chat
+            </span>
+            <span>
+              <HiMenuAlt2  />
+            </span>
+            
+            
+             </div>
+
           
 
         </div>

@@ -108,14 +108,14 @@ const Login = () => {
   return (
     <div className=' relative registerBack lg:flex items-center flex-col justify-center h-screen'>
       <div className=' lg:border backdrop-blur-sm h-full lg:h-fit text-white p-2  flex flex-col items-center justify-center rounded-md shadow-md'>
-      <span className='lg:text-4xl flex items-center justify-center flex-col  space-y-2  text-2xl font-bold lg:text-[#226264] '>
+      <span className='lg:text-2xl flex items-center justify-center flex-col  space-y-2  text-2xl font-bold lg:text-[#226264] '>
         <span className='  '>
-          <img className=' h-24' src={img} alt="" />
+          <img className=' h-24 lg:h-16' src={img} alt="" />
         </span>
         <span className=' bg-white text-black border-l-[8px] rounded-lg rounded-tr-none rounded-bl-none border-b-[8px] border-gray-600 px-3' > QuickChat </span>
         
          </span>
-          <form className="flex max-w-md flex-col lg:w-[40vw] w-full  p-3 gap-4">
+          <form className="flex  flex-col lg:w-[20vw] w-full  p-3 gap-4">
       <div>
         <div className="mb-2 block ">
           <Label htmlFor="email1" color={'white'} value="userName" />
@@ -129,7 +129,7 @@ const Login = () => {
         <TextInput icon={HiLockClosed}  className='' value={data.password} onChange={handleChange} id="password1" placeholder='your password..' name='password' type={`${eye?'text':'password'}`} required />
         <span onClick={()=>{
           setEye(!eye)
-        }} className='  absolute right-3 lg:right-4 bottom-3 lg:bottom-2 lg:text-2xl text-[24px]  '>
+        }} className='  absolute right-3 lg:right-4 bottom-3 lg:bottom-3 lg:text-[22px] text-[24px]  '>
           {
             eye?<HiEyeOff color='gray' />:<HiEye color='gray' />
           
@@ -141,7 +141,7 @@ const Login = () => {
       </div>
       <Button onClick={handleLogin} type="submit" disabled={loader} className=' uppercase'>{loader?<div><Spinner/></div>:'login'} </Button>
       <div className=' text-[15px] lg:text-[16px]  flex items-center justify-center'>
-        <Link to={'/forgot-password'} className=' relative before:absolute   before:border-b-[1px] before:top-[12px] lg:before:right-32 lg:before:top-[14px] before:right-28   before:w-full after:absolute after:left-28   after:border-b-[1px] after:top-[12px] lg:after:top-[14px] lg:after:left-32   after:w-full text-blue-600 underline underline-offset-4' > forgot password</Link>
+        <Link to={'/forgot-password'} className=' relative before:absolute   before:border-b-[1px] before:top-[12px] lg:before:right-24 lg:before:top-[14px] before:right-28   before:w-full after:absolute after:left-28   after:border-b-[1px] after:top-[12px] lg:after:top-[14px] lg:after:left-24   after:w-full text-blue-600 underline underline-offset-4' > forgot password</Link>
       </div> 
       <div className=' flex  items-center justify-center'>
         <span className=' lg:text-[16px] text-[14px] uppercase  '>Don't have any account? <Link to={'/register'} className=' text-blue-600 underline underline-offset-6'>register</Link> </span>
